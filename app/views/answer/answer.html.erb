@@ -1,7 +1,22 @@
-<h1>Coach answer </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-6 border-start border-5 my-5"><%=@ask%>
+    <br/>-You
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 border-start border-5 bg-warning mb-5"><strong><%=@answer%></strong>
+    <br/>-Your Coach
+    </div>
+  </div>
+  <p><%= link_to "New Question", ask_path %></p>
+</div>
+
+<%# La vue answer.html.erb affichera la question que tu poses au coach et sa réponse.
+Le contrôleur devrait lire la question depuis params et calculer une variable d’instance
+@answer à afficher dans la vue. Voici deux requêtes que tu devrais maîtriser :
 
 
-La vue answer.html.erb affichera la question que tu poses au coach et sa réponse. Le contrôleur devrait lire la question depuis params et calculer une variable d’instance @answer à afficher dans la vue. Voici deux requêtes que tu devrais maîtriser :
 
 localhost:3000/answer?question=hello
 localhost:3000/answer?question=what time is it?
@@ -9,4 +24,4 @@ Si tu ne te souviens pas de la logique (médiocre) du coach, la voici :
 
 Si le message est I am going to work, le coach répondra Great!.
 Si le message contient un point d’interrogation ? à la fin, le coach répondra Silly question, get dressed and go to work!.
-Sinon, le coach répondra I don't care, get dressed and go to work!.
+Sinon, le coach répondra I don't care, get dressed and go to work!. %>
